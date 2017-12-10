@@ -1,0 +1,22 @@
+{
+  "name": "jeffrey-huysentruyt",
+  "description": "Jeffrey Huysentruyt personal website",
+  "version": "1.0.0",
+  "author": "Jonathan Wagoner <jvwagoner@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.130",
+    "gatsby-link": "^1.6.30",
+    "gatsby-plugin-google-fonts": "0.0.3",
+    "gatsby-plugin-postcss-sass": "^1.0.14",
+    "gatsby-plugin-react-helmet": "^1.0.8"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^1.8.2"
+  }
+}

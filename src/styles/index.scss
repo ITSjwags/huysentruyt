@@ -1,0 +1,38 @@
+@import 'sanitize';
+@import 'typography';
+
+/**********
+	GLOBAL 
+**********/
+.g-container {
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+	max-width: 1320px;
+}
+
+.g-bg-change {
+	animation: bg-change 90s linear 2s infinite;
+	background: #FF2E00;
+}
+
+@keyframes bg-change {
+  0%, 100% { background: #FF2E00; }
+  20%      { background: #E48647; }
+  40%      { background: #21B6FC; }
+  60%      { background: #2A3449; }
+  80%      { background: #268388; }  
+}
+
+.g-color-change {
+	animation: color-change 90s linear 2s infinite;
+	color: #FF2E00;
+}
+
+@keyframes color-change {
+  0%, 100% { color: #FF2E00; }
+  20%      { color: #E48647; }
+  40%      { color: #21B6FC; }
+  60%      { color: #2A3449; }
+  80%      { color: #268388; }  
+}
