@@ -8,12 +8,14 @@ $Navbar-list-color: #fff;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .Navbar-logo {
   color: #fff;
   font-size: 42px;
   font-weight: 900;
+  margin: 0 20px;
   text-decoration: none;
 
   .fullname {
@@ -36,6 +38,7 @@ $Navbar-list-color: #fff;
   color: #fff;
   display: flex;
   justify-content: center;
+  padding-right: 20px;
   // min-width: 88px;
 }
 

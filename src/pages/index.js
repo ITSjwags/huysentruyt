@@ -5,7 +5,8 @@ import Hero from '../components/hero';
 const IndexPage = () => (
   <div>
     <Hero />
-    <p>Welcome to your new portfolio site.</p>
+
+    <p className="g-color-change">Welcome to your new portfolio site.</p>
   </div>
 )
 

@@ -11,19 +11,19 @@ class TemplateWrapper extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      height: 0
-    }
+    // this.state = {
+    //   height: 0
+    // }
   }
 
-  componentDidMount() {
-    const navbarHeight = ReactDOM.findDOMNode(this.refs.navbar).clientHeight;
-    this.setState({ height: navbarHeight });
-  }
+  // componentDidMount() {
+  //   const navbarHeight = ReactDOM.findDOMNode(this.refs.navbar).clientHeight;
+  //   this.setState({ height: navbarHeight });
+  // }
 
   render() {
     const { children } = this.props;
-    const { height } = this.state;
+    // const { height } = this.state;
 
     return (
       <div>
@@ -37,12 +37,14 @@ class TemplateWrapper extends Component {
         <h1>Jeffrey Huysentruyt</h1>
 
         <header role="banner">
-          <Navbar
-            ref="navbar"
-          />
+          <div className="g-container">
+            <Navbar
+              ref="navbar"
+            />
+          </div>
         </header>
 
-        <main role="main" style={{ paddingTop: height }}>
+        <main role="main" /*style={{ paddingTop: height }}*/>
           { children() }
         </main>
 

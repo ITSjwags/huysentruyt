@@ -21,7 +21,7 @@ class Navbar extends Component {
     const { isActive } = this.state;
 
     return (
-      <div className="Navbar g-container">
+      <div className="Navbar">
         <div>
           <Link
             className="Navbar-logo"

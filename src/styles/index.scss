@@ -2,11 +2,12 @@
 @import 'typography';
 
 /**********
-	GLOBAL 
+	GLOBAL
 **********/
 .g-container {
 	margin: 0 auto;
-	padding: 0 20px;
+  padding: 0 20px;
+  position: relative;
 	width: 100%;
 	max-width: 1320px;
 }
@@ -18,10 +19,10 @@
 
 @keyframes bg-change {
   0%, 100% { background: #FF2E00; }
-  20%      { background: #E48647; }
-  40%      { background: #21B6FC; }
-  60%      { background: #2A3449; }
-  80%      { background: #268388; }  
+  20%      { background: #003EDE; }
+  40%      { background: #85C744; }
+  60%      { background: #10C9C9; }
+  80%      { background: #7907EB; }
 }
 
 .g-color-change {
@@ -31,8 +32,8 @@
 
 @keyframes color-change {
   0%, 100% { color: #FF2E00; }
-  20%      { color: #E48647; }
-  40%      { color: #21B6FC; }
-  60%      { color: #2A3449; }
-  80%      { color: #268388; }  
+  20%      { color: #003EDE; }
+  40%      { color: #85C744; }
+  60%      { color: #10C9C9; }
+  80%      { color: #7907EB; }
 }
