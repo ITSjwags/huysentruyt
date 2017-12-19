@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import '../styles/hero.scss';
 // images
 import arrow from '../images/arrow.png';
+import heroImage from '../images/hero.jpg';
 
 class Hero extends Component {
   render() {
@@ -31,10 +32,13 @@ class Hero extends Component {
           </div>
 
           <div className="Hero-right">
-            <a href="#about">
-              <img src={arrow} alt="Scroll down for more content." />
-              <span>You know what to do</span>
-            </a>
+            <img className="Hero-right-background" src={heroImage} alt="Jeffrey Huysentruyt image" />
+            <div className="Hero-right-content">
+              <a href="#about">
+                <img src={arrow} alt="Scroll down for more content." />
+                <span>You know what to do</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import Navbar from '../components/navbar';
 // styles
 import '../styles/index.scss';
 
-class TemplateWrapper extends Component {
+class IndexLayout extends Component {
 
   render() {
     const { children } = this.props;
@@ -43,8 +43,8 @@ class TemplateWrapper extends Component {
   }
 }
 
-TemplateWrapper.propTypes = {
+IndexLayout.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper;
+export default IndexLayout;

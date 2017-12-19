@@ -27,19 +27,7 @@
   padding: 35px 20px;
   position: relative;
 
-  &:before {
-    background: url(../images/hero.jpg) no-repeat center right;
-    content: "";
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left:0
-  }
-
   a {
-    align-items: flex-end;
     color: #fff;
     display: flex;
     position: relative;
@@ -69,6 +57,14 @@
   0% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0); }
+}
+
+.Hero-right-background {
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .Hero-buttons {
@@ -216,6 +212,8 @@
   }
 
   .Hero-right {
+    justify-content: flex-start;
+
     a {
       flex-direction: column;
 
@@ -230,5 +228,12 @@
     0% { transform: translateY(0); }
     50% { transform: translateY(20px); }
     100% { transform: translateY(0); }
+  }
+
+  .Hero-right-content {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    max-width: 620px;
   }
 }
