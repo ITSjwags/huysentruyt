@@ -1,0 +1,32 @@
+.About-bio {
+  padding-top: 65px;
+  max-width: 800px;
+}
+
+.About-awards {
+  padding: 90px 0 65px 0;
+  max-width: 575px;
+
+  h3 {
+    border-bottom: 1px solid rgba(46, 46, 56, 0.15);
+    text-align: center;
+  }
+}
+
+.About-award {
+  margin-top: 30px;
+
+  p {
+    padding-bottom: 0;
+    text-align: center;
+  }
+}
+
+.About-award-date {
+  font-style: italic;
+}
+
+.About-award-title,
+.About-award-work {
+  font-weight: bold;
+}

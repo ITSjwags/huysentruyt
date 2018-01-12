@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll';
 // styles
 import '../styles/hero.scss';
 // images
@@ -17,16 +18,27 @@ class Hero extends Component {
               <h2>I’m Jeffrey, a creative director & UI+UX designer working in Detroit.</h2>
 
               <div className="Hero-buttons">
-                <a href="#about" className="Hero-button">
+                <Link
+                  className="Hero-button"
+                  to="about"
+                  smooth={"easeInOutQuad"}
+                  duration={750}
+                >
                   About Me
                   <span></span>
                   <span></span>
-                </a>
-                <a href="#work" className="Hero-button">
+                </Link>
+
+                <Link
+                  className="Hero-button"
+                  to="work"
+                  smooth={"easeInOutQuad"}
+                  duration={750}
+                >
                   My Work
                   <span></span>
                   <span></span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -34,10 +46,14 @@ class Hero extends Component {
           <div className="Hero-right">
             <img className="Hero-right-background" src={heroImage} alt="Jeffrey Huysentruyt image" />
             <div className="Hero-right-content">
-              <a href="#about">
+              <Link
+                to="about"
+                smooth={"easeInOutQuad"}
+                duration={750}
+              >
                 <img src={arrow} alt="Scroll down for more content." />
                 <span>You know what to do</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
