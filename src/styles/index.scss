@@ -4,6 +4,18 @@
 /**********
 	GLOBAL
 **********/
+a {
+  cursor: pointer;
+}
+
+.gray {
+  color: #7D7D7D;
+}
+
+.gray-light {
+  color: #BABABA;
+}
+
 .g-container {
 	margin: 0 auto;
   padding: 0 20px;
@@ -36,4 +48,11 @@
   40%      { color: #85C744; }
   60%      { color: #10C9C9; }
   80%      { color: #7907EB; }
+}
+
+/* desktop styles */
+@media all and (min-width: 768px) {
+  body {
+    overflow: auto !important;
+  }
 }
