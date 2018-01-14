@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'gatsby-link';
 import { Link as ScrollLink } from 'react-scroll';
 // styles
 import '../styles/navbar.scss';
@@ -18,14 +17,23 @@ class Navbar extends Component {
 
     this.state = {
       isActive: false,
-      menuHeight: 0
+      menuHeight: 0,
+      scrollTop: 0
     }
   }
 
   componentDidMount() {
     this.getMenuHeight();
     window.addEventListener('resize', this.getMenuHeight);
-    window.addEventListener('scroll', this.getMenuHeight);
+    window.addEventListener('scroll', (e) => {
+      this.getMenuHeight;
+
+      let scrollTop = e.target.documentElement.scrollTop;
+
+      this.setState({
+        scrollTop: scrollTop
+      });
+    });
   }
 
   componentWillUnmount() {
@@ -38,6 +46,15 @@ class Navbar extends Component {
 
     this.setState({
       isActive: !this.state.isActive
+    });
+
+    const mobileMenu = document.querySelector('.Navbar-list-mobile');
+    mobileMenu.addEventListener('transitionend', () => {
+      if (mobileMenu.classList.contains('is-open')) {
+        mobileMenu.classList.remove('is-open');
+      } else {
+        mobileMenu.classList.add('is-open');
+      }
     });
 
     if (!this.state.isActive) {
@@ -60,16 +77,21 @@ class Navbar extends Component {
 
   render() {
     const { isActive, menuHeight } = this.state;
+    const { scrollTop } = this.state;
+
+    const shouldbeFixed = scrollTop >= 100;
 
     return (
-      <div className={`Navbar ${isActive ? 'is-active' : ''}`} ref="navbar">
+      <div className={`Navbar${isActive ? ' is-active' : ''}${shouldbeFixed ? ' is-fixed' : ''}`} ref="navbar">
         <div>
-          <Link
+          <ScrollLink
             className="Navbar-logo"
-            to="/"
+            to="___gatsby"
+            smooth={"easeInOutQuad"}
+            duration={750}
           >
             J<span className="fullname">effrey</span>.
-          </Link>
+          </ScrollLink>
         </div>
 
         <nav role="navigation">
@@ -92,6 +114,7 @@ class Navbar extends Component {
                   to="about"
                   smooth={"easeInOutQuad"}
                   duration={750}
+                  offset={-70}
                 >
                   About
                 </ScrollLink>
@@ -102,6 +125,7 @@ class Navbar extends Component {
                   to="work"
                   smooth={"easeInOutQuad"}
                   duration={750}
+                  offset={-70}
                 >
                   Work
                 </ScrollLink>
@@ -112,6 +136,7 @@ class Navbar extends Component {
                   to="contact"
                   smooth={"easeInOutQuad"}
                   duration={750}
+                  offset={-70}
                 >
                   Contact
                 </ScrollLink>
@@ -128,6 +153,7 @@ class Navbar extends Component {
                     to="about"
                     smooth={"easeInOutQuad"}
                     duration={750}
+                    offset={-70}
                     onClick={this.handleScrollLinkClick}
                     delay={250}
                   >
@@ -142,6 +168,7 @@ class Navbar extends Component {
                     to="work"
                     smooth={"easeInOutQuad"}
                     duration={750}
+                    offset={-70}
                     onClick={this.handleScrollLinkClick}
                     delay={250}
                   >
@@ -156,6 +183,7 @@ class Navbar extends Component {
                     to="contact"
                     smooth={"easeInOutQuad"}
                     duration={750}
+                    offset={-70}
                     onClick={this.handleScrollLinkClick}
                     delay={250}
                   >

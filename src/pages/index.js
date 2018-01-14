@@ -6,7 +6,6 @@ import About from '../components/about';
 const IndexPage = () => (
   <div>
     <Hero />
-
     <About />
   </div>
 )

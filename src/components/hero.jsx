@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 // styles
 import '../styles/hero.scss';
 // images
@@ -18,27 +18,29 @@ class Hero extends Component {
               <h2>I’m Jeffrey, a creative director & UI+UX designer working in Detroit.</h2>
 
               <div className="Hero-buttons">
-                <Link
-                  className="Hero-button"
+                <ScrollLink
+                  className="g-button"
                   to="about"
                   smooth={"easeInOutQuad"}
                   duration={750}
+                  offset={-70}
                 >
                   About Me
                   <span></span>
                   <span></span>
-                </Link>
+                </ScrollLink>
 
-                <Link
-                  className="Hero-button"
+                <ScrollLink
+                  className="g-button"
                   to="work"
                   smooth={"easeInOutQuad"}
                   duration={750}
+                  offset={-70}
                 >
                   My Work
                   <span></span>
                   <span></span>
-                </Link>
+                </ScrollLink>
               </div>
             </div>
           </div>
@@ -46,14 +48,15 @@ class Hero extends Component {
           <div className="Hero-right">
             <img className="Hero-right-background" src={heroImage} alt="Jeffrey Huysentruyt image" />
             <div className="Hero-right-content">
-              <Link
+              <ScrollLink
                 to="about"
                 smooth={"easeInOutQuad"}
                 duration={750}
+                offset={-70}
               >
                 <img src={arrow} alt="Scroll down for more content." />
                 <span>You know what to do</span>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
         </div>

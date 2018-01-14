@@ -10,6 +10,18 @@ $Navbar-list-color: #fff;
   left: 0;
   width: 100%;
   z-index: 1;
+
+  &.is-fixed {
+    animation: slide-down 250ms ease-in-out forwards;
+    background: rgba(0, 0, 0, 0.75);
+    transform: translateY(-100%);
+    position: fixed;
+  }
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(-100%) }
+  100% { transform: translateY(0) }
 }
 
 .Navbar-logo {
@@ -124,7 +136,7 @@ $Navbar-list-color: #fff;
   left: 0;
   width: 100%;
 
-  .is-active & {
+  .is-open & {
     opacity: 1;
   }
 }
@@ -163,9 +175,6 @@ $Navbar-list-color: #fff;
 /* desktop styles */
 @media all and (min-width: 768px) {
   .Navbar {
-    animation: none !important;
-    background: transparent !important;
-
     &.is-active {
       border-bottom: 0;
     }
