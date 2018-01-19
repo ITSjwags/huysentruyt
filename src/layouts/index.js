@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 // components
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 // styles
 import '../styles/index.scss';
 
@@ -36,7 +37,7 @@ class IndexLayout extends Component {
         </main>
 
         <footer role="contentinfo">
-          footer stuff
+          <Footer />
         </footer>
       </div>
     )
