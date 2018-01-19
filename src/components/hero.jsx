@@ -8,13 +8,26 @@ import arrow from '../images/arrow.png';
 import heroImage from '../images/hero.jpg';
 
 class Hero extends Component {
+
+  getPhrase() {
+    const hr = (new Date()).getHours();
+    const phrases = ["GOOD MORNING.", "GOOD AFTERNOON.", "GOOD EVENING"];
+
+    if (hr < 12) return phrases[0];
+    if (hr >= 18) return phrases[2];
+
+    return phrases[1];
+  }
+
   render() {
     return (
       <div className="Hero g-bg-change">
         <div className="Hero-content">
           <div className="Hero-left">
             <div className="Hero-left-content">
-              <span className="Hero-left-tagline">GOOD MORNING.</span>
+              <span className="Hero-left-tagline">
+                {this.getPhrase()}
+              </span>
               <h2>I’m Jeffrey, a creative director & UI+UX designer working in Detroit.</h2>
 
               <div className="Hero-buttons">

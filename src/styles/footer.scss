@@ -38,19 +38,19 @@
   }
 }
 
+.Footer-right {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+}
+
 .Footer-download {
   background: rgba(0, 0, 0, 0.1);
   color: #fff;
-  flex: 1;
+  display: block;
   padding: 30px 0;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
-
-  > span {
-    display: block;
-  }
 }
 
 /* desktop styles */
@@ -66,8 +66,13 @@
     justify-content: space-between;
   }
 
+  .Footer-right {
+    text-align: right;
+  }
+
   .Footer-download {
     background: transparent;
-    text-align: right;
+    display: inline-block;
+    padding: 0;
   }
 }

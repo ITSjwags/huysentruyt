@@ -52,9 +52,11 @@ class Footer extends Component {
             </li>
           </ul>
 
-          <a href="#" className="Footer-download">
-            Resume
-          </a>
+          <div className="Footer-right">
+            <a href="#" className="Footer-download">
+              Resume
+            </a>
+          </div>
         </div>
       </div>
     );
