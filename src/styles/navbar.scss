@@ -1,4 +1,4 @@
-$Navbar-list-color: #fff;
+@import '../styles/colors.scss';
 
 .Navbar {
   align-items: center;
@@ -25,7 +25,7 @@ $Navbar-list-color: #fff;
 }
 
 .Navbar-logo {
-  color: #fff;
+  color: $color-white;
   font-size: 42px;
   font-weight: 900;
   margin: 0 20px;
@@ -53,7 +53,7 @@ $Navbar-list-color: #fff;
 }
 
 .Navbar-button {
-  color: #fff;
+  color: $color-white;
   display: flex;
   justify-content: center;
   padding-right: 20px;
@@ -71,7 +71,7 @@ $Navbar-list-color: #fff;
   width: 100%;
 
   .line {
-    background-color: #fff;
+    background-color: $color-white;
     display: block;
     height: 2px;
     margin: 8px auto;
@@ -120,7 +120,7 @@ $Navbar-list-color: #fff;
 
     li {
       a {
-        color: $Navbar-list-color;
+        color: $color-white;
         display: block;
         padding-top: 40px;
         text-decoration: none;
@@ -163,7 +163,7 @@ $Navbar-list-color: #fff;
 
 .Navbar-list-resume {
   background: rgba(0, 0, 0, 0.1);
-  color: #fff;
+  color: $color-white;
   display: block;
   padding: 40px;
   text-align: center;
@@ -212,13 +212,13 @@ $Navbar-list-color: #fff;
         }
 
         a {
-          color: $Navbar-list-color;
+          color: $color-white;
           border-bottom: 1px solid transparent;
           text-decoration: none;
           transition: all 250ms ease-in-out;
 
           &:hover {
-            border-color: $Navbar-list-color;
+            border-color: $color-white;
           }
         }
       }

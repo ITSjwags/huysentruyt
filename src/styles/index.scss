@@ -1,5 +1,6 @@
 @import 'sanitize';
 @import 'typography';
+@import 'colors';
 
 /**********
 	GLOBAL
@@ -9,11 +10,11 @@ a {
 }
 
 .gray {
-  color: #7D7D7D;
+  color: $color-gray;
 }
 
 .gray-light {
-  color: #BABABA;
+  color: $color-gray-light;
 }
 
 .g-container {
@@ -25,7 +26,7 @@ a {
 }
 
 .g-button {
-  color: #fff;
+  color: $color-white;
   display: inline-block;
   margin-left: 45px;
   overflow: hidden;
@@ -41,7 +42,7 @@ a {
   }
 
   &:after {
-    background: #fff;
+    background: $color-white;
     bottom: 0;
     content: '';
     display: block;
@@ -62,7 +63,7 @@ a {
     width: 100%;
 
     &:after, &:before {
-      background: #fff;
+      background: $color-white;
       content: '';
       display: block;
       position: absolute;
@@ -145,45 +146,45 @@ a {
 
 .g-button--alt {
   animation: color-change 90s linear 2s infinite;
-  color: #FF2E00;
+  color: $color-red;
 
   &:after {
     animation: bg-change 90s linear 2s infinite;
-    background: #FF2E00;
+    background: $color-red;
   }
 
   span {
     &:after, &:before {
       animation: bg-change 90s linear 2s infinite;
-      background: #FF2E00;
+      background: $color-red;
     }
   }
 }
 
 .g-bg-change {
 	animation: bg-change 90s linear 2s infinite;
-	background: #FF2E00;
+	background: $color-red;
 }
 
 @keyframes bg-change {
-  0%, 100% { background: #FF2E00; }
-  20%      { background: #003EDE; }
-  40%      { background: #85C744; }
-  60%      { background: #10C9C9; }
-  80%      { background: #7907EB; }
+  0%, 100% { background: $color-red; }
+  20%      { background: $color-blue; }
+  40%      { background: $color-green; }
+  60%      { background: $color-turquoise; }
+  80%      { background: $color-purple; }
 }
 
 .g-color-change {
 	animation: color-change 90s linear 2s infinite;
-	color: #FF2E00;
+	color: $color-red;
 }
 
 @keyframes color-change {
-  0%, 100% { color: #FF2E00; }
-  20%      { color: #003EDE; }
-  40%      { color: #85C744; }
-  60%      { color: #10C9C9; }
-  80%      { color: #7907EB; }
+  0%, 100% { color: $color-red; }
+  20%      { color: $color-blue; }
+  40%      { color: $color-green; }
+  60%      { color: $color-turquoise; }
+  80%      { color: $color-purple; }
 }
 
 /* desktop styles */

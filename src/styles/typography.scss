@@ -1,5 +1,7 @@
+@import '../styles/colors.scss';
+
 body {
-  color: #2E2E38;
+  color: $color-navy;
   font-family: 'Montserrat', sans-serif; /* 400, 700, 900 */
   font-size: 16px;
   line-height: 1.2;
