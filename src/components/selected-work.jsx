@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-// styles
-import '../styles/selected-work.scss';
 // images
 import arrow from '../images/arrow-horiz.png';
+// styles
+import '../styles/selected-work.scss';
+
 
 const SelectedWork = () => (
   <div className="SelectedWork" id="work">

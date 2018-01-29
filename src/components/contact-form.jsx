@@ -5,6 +5,7 @@ import Input from './input';
 // styles
 import '../styles/contact.scss';
 
+
 class ContactForm extends Component {
   constructor(props) {
     super(props);

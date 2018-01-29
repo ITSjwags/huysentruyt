@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
-// styles
-import '../styles/hero.scss';
 // images
 import arrow from '../images/arrow.png';
 import heroImage from '../images/hero.jpg';
+// styles
+import '../styles/hero.scss';
+
 
 class Hero extends Component {
 

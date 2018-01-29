@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // styles
 import '../styles/about.scss';
-// images
+
 
 const About = () => (
   <div id="about" className="About g-container">

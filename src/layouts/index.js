@@ -8,6 +8,7 @@ import Footer from '../components/footer';
 // styles
 import '../styles/index.scss';
 
+
 class IndexLayout extends Component {
 
   render() {

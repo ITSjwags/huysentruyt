@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// styles
-import '../styles/footer.scss';
 // images
 import iconDribbble from '../images/icon-dribbble.png';
 import iconFacebook from '../images/icon-facebook.png';
@@ -9,6 +7,9 @@ import iconInstagram from '../images/icon-instagram.png';
 import iconLinkedin from '../images/icon-linkedin.png';
 import iconTwitter from '../images/icon-twitter.png';
 import iconYoutube from '../images/icon-youtube.png';
+// styles
+import '../styles/footer.scss';
+
 
 class Footer extends Component {
   constructor(props) {
