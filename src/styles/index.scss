@@ -26,8 +26,11 @@ a {
 }
 
 .g-button {
+  border: 0;
   color: $color-white;
+  cursor: pointer;
   display: inline-block;
+  font-weight: 700;
   margin-left: 45px;
   overflow: hidden;
   padding: 10px 20px;
@@ -46,7 +49,7 @@ a {
     bottom: 0;
     content: '';
     display: block;
-    height: 1px;
+    height: 2px;
     left: 50%;
     position: absolute;
     transform: translatex(-50%);
@@ -79,7 +82,7 @@ a {
         transform: scale3d(1, 0, 1);
         transform-origin: bottom center;
         transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
-        width: 1px;
+        width: 2px;
       }
 
       &:before {
@@ -92,12 +95,12 @@ a {
     }
 
     &:last-child {
-      height: 1px;
+      height: 2px;
       width: 100%;
 
       &:before, &:after {
         bottom: 0;
-        height: 1px;
+        height: 2px;
         transform: scale3d(0, 1, 1);
         transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
         width: 100%;
@@ -146,6 +149,7 @@ a {
 
 .g-button--alt {
   animation: color-change 90s linear 2s infinite;
+  background-color: transparent;
   color: $color-red;
 
   &:after {

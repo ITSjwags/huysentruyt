@@ -11,9 +11,9 @@ const About = () => (
       <div className="About-bio">
         <h3 className="g-color-change">I am a digital craftsman who creates beautiful and intuitive user interfaces.</h3>
 
-        <p>Being a creative director and UI+UX designer with over a 8 years experience, I know how to fuel freelance relationships, high imapact startups and creative agencies. I have a strong passion for leading teams to create amazing products and brands with a human centered design approach.</p>
+        <p>Being a creative director and UI+UX designer with over 8 years of experience, I know how to fuel freelance relationships, high impact startups and creative agencies. I have a strong passion for leading teams to create amazing products and brands with a human-centered design approach.</p>
 
-        <p>When not creating amazing experiences during my 9 to 5, you can find me freelancing with the Habitat Collective, shooting video for my youtube channel, hitting the links and enjoying the outdoors or watching Disney movies.</p>
+        <p>When not creating amazing experiences during my 9 to 5, you can find me freelancing with Habitat Studio, shooting video for my YouTube channel, hitting the links, enjoying the outdoors or watching Disney movies.</p>
       </div>
 
       <div className="About-awards">

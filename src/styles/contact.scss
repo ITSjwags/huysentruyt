@@ -1,0 +1,65 @@
+@import './colors.scss';
+
+.Contact {
+  background-color: #f5f5f5;
+  padding: 75px 20px;
+  text-align: center;
+
+  p {
+    font-weight: 700;
+  }
+}
+
+.Contact-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+}
+
+.form-field {
+  display: block;
+  position: relative;
+
+  input, textarea {
+    background: $color-gray-medium;
+    border: 1px solid $color-gray-medium;
+    display: block;
+    font-weight: 700;
+    margin: 0 auto 30px;
+    padding: 30px 20px 20px;
+    transition: all 250ms ease-in-out;
+    width: 100%;
+
+    &:hover {
+      background: $color-white;
+    }
+
+    &:active, &:focus {
+      background: $color-white;
+      border-color: $color-navy;
+      outline: none;
+    }
+
+    ~ label {
+      color: $color-gray-light;
+      font-size: 14px;
+      opacity: 0;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+
+    }
+
+    &.has-value {
+      ~ label {
+        opacity: 1;
+        top: 8px;
+        transition: all 250ms ease-in-out;
+      }
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
