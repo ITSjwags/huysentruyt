@@ -213,11 +213,13 @@
 
         a {
           color: $color-white;
-          border-bottom: 1px solid transparent;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 5px;
           text-decoration: none;
           transition: all 250ms ease-in-out;
 
-          &:hover {
+          &:hover,
+          &.is-active {
             border-color: $color-white;
           }
         }

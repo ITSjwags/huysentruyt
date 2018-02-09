@@ -81,19 +81,13 @@ class Navbar extends Component {
   render() {
     const { page } = this.props;
     const { isActive, menuHeight, scrollTop } = this.state;
+    const isHomePage = page === '';
     const shouldbeFixed = scrollTop >= 100;
 
     return (
       <div className={`Navbar${isActive ? ' is-active' : ''}${shouldbeFixed ? ' is-fixed' : ''}`} ref="navbar">
         <div>
-          {page !== '' ?
-            <Link
-              className="Navbar-logo"
-              to="/"
-            >
-              J<span className="fullname">effrey</span>.
-            </Link>
-            :
+          {isHomePage ?
             <ScrollLink
               className="Navbar-logo"
               to="___gatsby"
@@ -102,6 +96,13 @@ class Navbar extends Component {
             >
               J<span className="fullname">effrey</span>.
             </ScrollLink>
+            :
+            <Link
+              className="Navbar-logo"
+              to="/"
+            >
+              J<span className="fullname">effrey</span>.
+            </Link>
           }
 
         </div>
@@ -133,7 +134,7 @@ class Navbar extends Component {
               </li>
               <li>
                 <ScrollLink
-                  className="Navbar-listLink"
+                  className={`Navbar-listLink ${isHomePage ? '' : 'is-active'}`}
                   to="work"
                   smooth={"easeInOutQuad"}
                   duration={750}

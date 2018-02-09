@@ -57,7 +57,7 @@ const SelectedWork = () => (
           to="/gentlemans-box"
         >
           <img className="SelectedWork-thumb" src={thumbGB} alt="RocketPost thumbnail" />
-          <h3>Gentlemans Box</h3>
+          <h3>Gentleman's Box</h3>
           <p>Brand & Package Design</p>
           <img className="SelectedWork-arrow" src={arrow} alt="View case study for Gentlemans Box." />
         </Link>
