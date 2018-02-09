@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Link from "gatsby-link";
+import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
 // images
 import iconDribbble from '../images/icon-dribbble.png';
@@ -77,22 +79,31 @@ class Navbar extends Component {
   }
 
   render() {
-    const { isActive, menuHeight } = this.state;
-    const { scrollTop } = this.state;
-
+    const { page } = this.props;
+    const { isActive, menuHeight, scrollTop } = this.state;
     const shouldbeFixed = scrollTop >= 100;
 
     return (
       <div className={`Navbar${isActive ? ' is-active' : ''}${shouldbeFixed ? ' is-fixed' : ''}`} ref="navbar">
         <div>
-          <ScrollLink
-            className="Navbar-logo"
-            to="___gatsby"
-            smooth={"easeInOutQuad"}
-            duration={750}
-          >
-            J<span className="fullname">effrey</span>.
-          </ScrollLink>
+          {page !== '' ?
+            <Link
+              className="Navbar-logo"
+              to="/"
+            >
+              J<span className="fullname">effrey</span>.
+            </Link>
+            :
+            <ScrollLink
+              className="Navbar-logo"
+              to="___gatsby"
+              smooth={"easeInOutQuad"}
+              duration={750}
+            >
+              J<span className="fullname">effrey</span>.
+            </ScrollLink>
+          }
+
         </div>
 
         <nav role="navigation">
@@ -238,6 +249,10 @@ class Navbar extends Component {
       </div>
     )
   }
+}
+
+Navbar.propTypes = {
+  page: PropTypes.string,
 }
 
 export default Navbar;

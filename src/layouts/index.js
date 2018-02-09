@@ -13,6 +13,7 @@ class IndexLayout extends Component {
 
   render() {
     const { children } = this.props;
+    const pageName = this.props.location.pathname.replace(/\//g, '');
 
     return (
       <div>
@@ -29,6 +30,7 @@ class IndexLayout extends Component {
           <div className="g-container">
             <Navbar
               ref="navbar"
+              page={pageName}
             />
           </div>
         </header>
