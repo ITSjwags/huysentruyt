@@ -21,7 +21,6 @@ class ContactForm extends Component {
           <p>If you are interested in a new project, collaboration, or a reason to get a drink don't hesitate to fill out the form to the right.</p>
 
           <form action="https://formspree.io/jvwagoner@gmail.com" method="POST">
-
             <Input
               label="Name"
               name="name"
@@ -49,7 +48,7 @@ class ContactForm extends Component {
             <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
             <button className="g-button g-button--alt">
-              Say Hey
+              Say Hey &nbsp;&nbsp;👋
               <span></span>
               <span></span>
             </button>
