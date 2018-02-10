@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import Link from "gatsby-link";
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
@@ -27,24 +28,16 @@ class Navbar extends Component {
 
   componentDidMount() {
     this.getMenuHeight();
-    window.addEventListener('resize', this.getMenuHeight);
-    window.addEventListener('scroll', (e) => {
-      this.getMenuHeight;
-
-      let scrollTop = e.target.documentElement.scrollTop;
-
-      this.setState({
-        scrollTop: scrollTop
-      });
-    });
+    window.addEventListener('resize', _.debounce(this.getMenuHeight), 1000);
+    window.addEventListener('scroll', _.debounce(this.handleScroll), 1000);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.getMenuHeight);
-    window.removeEventListener('scroll', this.getMenuHeight);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
-  onToggleNavButton() {
+  onToggleNavButton = () => {
     this.getMenuHeight();
 
     this.setState({
@@ -74,20 +67,40 @@ class Navbar extends Component {
     this.setState({ menuHeight: menuHeight });
   }
 
+  handleScroll = (e) => {
+    this.getMenuHeight();
+
+    let scrollTop = e.target.documentElement.scrollTop;
+    this.setState({
+      scrollTop: scrollTop
+    });
+  }
+
   handleScrollLinkClick = () => {
     this.onToggleNavButton();
   }
 
   render() {
-    const { page } = this.props;
+    const { page = '' } = this.props;
     const { isActive, menuHeight, scrollTop } = this.state;
-    const isHomePage = page === '';
     const shouldbeFixed = scrollTop >= 100;
+    const isCaseStudy =
+      page.indexOf('rocketpost') !== -1 ||
+      page.indexOf('leveleleven') !== -1 ||
+      page.indexOf('element5') !== -1 ||
+      page.indexOf('gentlemansbox') !== -1;
 
     return (
       <div className={`Navbar${isActive ? ' is-active' : ''}${shouldbeFixed ? ' is-fixed' : ''}`} ref="navbar">
         <div>
-          {isHomePage ?
+          {isCaseStudy ?
+            <Link
+              className="Navbar-logo"
+              to="/"
+            >
+              J<span className="fullname">effrey</span>.
+            </Link>
+            :
             <ScrollLink
               className="Navbar-logo"
               to="___gatsby"
@@ -96,13 +109,6 @@ class Navbar extends Component {
             >
               J<span className="fullname">effrey</span>.
             </ScrollLink>
-            :
-            <Link
-              className="Navbar-logo"
-              to="/"
-            >
-              J<span className="fullname">effrey</span>.
-            </Link>
           }
 
         </div>
@@ -111,7 +117,7 @@ class Navbar extends Component {
           <div className={`Navbar-button ${isActive ? 'is-active' : ''}`}>
             <button
               className={`hamburger ${isActive ? 'is-active' : ''}`}
-              onClick={() => this.onToggleNavButton()}
+              onClick={this.onToggleNavButton}
             >
               <span className="line"></span>
               <span className="line"></span>
@@ -134,7 +140,7 @@ class Navbar extends Component {
               </li>
               <li>
                 <ScrollLink
-                  className={`Navbar-listLink ${isHomePage ? '' : 'is-active'}`}
+                  className={`Navbar-listLink ${isCaseStudy ? 'is-active' : ''}`}
                   to="work"
                   smooth={"easeInOutQuad"}
                   duration={750}

@@ -10,6 +10,7 @@
     "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-postcss-sass": "^1.0.14",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "lodash": "^4.17.5",
     "react-scroll": "^1.7.5"
   },
   "license": "MIT",
