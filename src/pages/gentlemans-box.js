@@ -1,10 +1,18 @@
 import React from 'react';
-// components
+import HeroCaseStudy from '../components/hero-case-study';
+// images
+import heroGB from '../images/hero-gb.png';
 
 
 const GentlemansBoxPage = () => (
-  <div>
-    Gentleman's Box
+  <div className="GentlemansBox">
+    <HeroCaseStudy
+      brand="Gentleman's Box"
+      blurb="Gentleman's Box is a themed, monthly subscription box service that sends style and grooming accessories to the savvy man."
+      featuredImageURL={heroGB}
+      identifier="gb"
+      jobTitle="Brand & Package Design"
+    />
   </div>
 )
 

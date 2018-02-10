@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/huysentruyt`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

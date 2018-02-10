@@ -21,7 +21,7 @@ const SelectedWork = () => (
       <li className="SelectedWork-listItem">
         <Link
           className="g-bg-change"
-          to="/rocketpost"
+          to="rocketpost"
         >
           <img className="SelectedWork-thumb" src={thumbRP} alt="RocketPost thumbnail" />
           <h3>RocketPost</h3>
@@ -32,7 +32,7 @@ const SelectedWork = () => (
       <li className="SelectedWork-listItem">
         <Link
           className="g-bg-change"
-          to="/leveleleven"
+          to="leveleleven"
         >
           <img className="SelectedWork-thumb" src={thumbL11} alt="RocketPost thumbnail" />
           <h3>LevelEleven</h3>
@@ -43,7 +43,7 @@ const SelectedWork = () => (
       <li className="SelectedWork-listItem">
         <Link
           className="g-bg-change"
-          to="/element5"
+          to="element5"
         >
           <img className="SelectedWork-thumb" src={thumbE5} alt="RocketPost thumbnail" />
           <h3>Element5</h3>
@@ -54,7 +54,7 @@ const SelectedWork = () => (
       <li className="SelectedWork-listItem">
         <Link
           className="g-bg-change"
-          to="/gentlemans-box"
+          to="gentlemans-box"
         >
           <img className="SelectedWork-thumb" src={thumbGB} alt="RocketPost thumbnail" />
           <h3>Gentleman's Box</h3>

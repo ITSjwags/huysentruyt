@@ -6,18 +6,21 @@
 
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
-// exports.onCreatePage = async ({ page, boundActionCreators }) => {
-//   const { createPage } = boundActionCreators;
+exports.onCreatePage = async ({ page, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
 
-//   return new Promise((resolve, reject) => {
-//     if (page.path.match(/^\/work/)) {
-//       // It's assumed that `landingPage.js` exists in the `/layouts/` directory
-//       page.layout = "work";
+  return new Promise((resolve, reject) => {
+    const isCaseStudy =
+      page.path.replace(/\//g, '') === 'rocketpost' ||
+      page.path.replace(/\//g, '') === 'leveleleven' ||
+      page.path.replace(/\//g, '') === 'element5' ||
+      page.path.replace(/\//g, '') === 'gentlemansbox';
 
-//       // Update the page.
-//       createPage(page);
-//     }
+    if (isCaseStudy) {
+      page.layout = "case-study";
+      createPage(page);
+    }
 
-//     resolve();
-//   });
-// };
+    resolve();
+  });
+};
