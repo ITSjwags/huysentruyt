@@ -13,8 +13,9 @@ class CaseStudyLayout extends Component {
 
   render() {
     const { children } = this.props;
-    const pageName = this.props.location.pathname.replace(/\//g, '');
     const pages = ['rocketpost', 'leveleleven', 'element5', 'gentlemans-box'];
+    const location = this.props.location.pathname.split('/');
+    const pageName = _.find(location, l => _.find(pages, p => p === l));
 
     return (
       <div>
