@@ -18,28 +18,21 @@ class Navbar extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       isActive: false,
-      menuHeight: 0,
       scrollTop: 0
     }
   }
 
   componentDidMount() {
-    this.getMenuHeight();
-    window.addEventListener('resize', _.debounce(this.getMenuHeight), 1000);
-    window.addEventListener('scroll', _.debounce(this.handleScroll), 1000);
+    window.addEventListener('scroll', _.debounce(this.handleScroll, 100));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.getMenuHeight);
     window.removeEventListener('scroll', this.handleScroll);
   }
 
   onToggleNavButton = () => {
-    this.getMenuHeight();
-
     this.setState({
       isActive: !this.state.isActive
     });
@@ -60,16 +53,7 @@ class Navbar extends Component {
     }
   }
 
-  getMenuHeight = () => {
-    const bodyHeight = window.innerHeight;
-    const menuHeight = bodyHeight - this.refs.navbar.offsetHeight;
-
-    this.setState({ menuHeight: menuHeight });
-  }
-
   handleScroll = (e) => {
-    this.getMenuHeight();
-
     let scrollTop = e.target.documentElement.scrollTop;
     this.setState({
       scrollTop: scrollTop
@@ -81,37 +65,19 @@ class Navbar extends Component {
   }
 
   render() {
-    const { page = '' } = this.props;
-    const { isActive, menuHeight, scrollTop } = this.state;
+    const { isActive, scrollTop } = this.state;
     const shouldbeFixed = scrollTop >= 100;
-    const isCaseStudy =
-      page.indexOf('rocketpost') !== -1 ||
-      page.indexOf('leveleleven') !== -1 ||
-      page.indexOf('element5') !== -1 ||
-      page.indexOf('gentlemansbox') !== -1;
 
     return (
       <div className={`Navbar${isActive ? ' is-active' : ''}${shouldbeFixed ? ' is-fixed' : ''}`} ref="navbar">
-        <div>
-          {isCaseStudy ?
-            <Link
-              className="Navbar-logo"
-              to="/"
-            >
-              J<span className="fullname">effrey</span>.
-            </Link>
-            :
-            <ScrollLink
-              className="Navbar-logo"
-              to="___gatsby"
-              smooth={"easeInOutQuad"}
-              duration={750}
-            >
-              J<span className="fullname">effrey</span>.
-            </ScrollLink>
-          }
-
-        </div>
+        <ScrollLink
+          className="Navbar-logo"
+          to="___gatsby"
+          smooth={"easeInOutQuad"}
+          duration={750}
+        >
+          J<span className="fullname">effrey</span>.
+        </ScrollLink>
 
         <nav role="navigation">
           <div className={`Navbar-button ${isActive ? 'is-active' : ''}`}>
@@ -140,7 +106,7 @@ class Navbar extends Component {
               </li>
               <li>
                 <ScrollLink
-                  className={`Navbar-listLink ${isCaseStudy ? 'is-active' : ''}`}
+                  className="Navbar-listLink"
                   to="work"
                   smooth={"easeInOutQuad"}
                   duration={750}
@@ -259,7 +225,7 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  page: PropTypes.string,
+
 }
 
 export default Navbar;

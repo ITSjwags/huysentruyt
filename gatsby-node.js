@@ -14,7 +14,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
       page.path.replace(/\//g, '') === 'rocketpost' ||
       page.path.replace(/\//g, '') === 'leveleleven' ||
       page.path.replace(/\//g, '') === 'element5' ||
-      page.path.replace(/\//g, '') === 'gentlemansbox';
+      page.path.replace(/\//g, '') === 'gentlemans-box';
 
     if (isCaseStudy) {
       page.layout = "case-study";

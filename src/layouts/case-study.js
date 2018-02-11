@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 // components
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import NavbarCaseStudy from '../components/navbar-case-study';
+// import FooterCaseStudy from '../components/footer-case-study';
 // styles
 import '../styles/index.scss';
 
 
-class IndexLayout extends Component {
+class CaseStudyLayout extends Component {
 
   render() {
     const { children } = this.props;
     const pageName = this.props.location.pathname.replace(/\//g, '');
+    const pages = ['rocketpost', 'leveleleven', 'element5', 'gentlemans-box'];
 
     return (
       <div>
@@ -28,9 +29,9 @@ class IndexLayout extends Component {
 
         <header role="banner">
           <div className="g-container">
-            <Navbar
-              ref="navbar"
-              page={pageName}
+            <NavbarCaseStudy
+              currentPage={pageName}
+              pages={pages}
             />
           </div>
         </header>
@@ -47,8 +48,8 @@ class IndexLayout extends Component {
   }
 }
 
-IndexLayout.propTypes = {
+CaseStudyLayout.propTypes = {
   children: PropTypes.func,
 }
 
-export default IndexLayout;
+export default CaseStudyLayout;
