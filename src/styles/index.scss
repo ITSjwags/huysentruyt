@@ -191,6 +191,11 @@ a {
   80%      { color: $color-purple; }
 }
 
+.CaseStudy {
+  overflow: hidden;
+}
+
+
 /* desktop styles */
 @media all and (min-width: 768px) {
   body {

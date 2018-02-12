@@ -50,8 +50,14 @@
 @media all and (min-width: 768px) {
   .HeroCaseStudy-content {
     display: flex;
+    flex-wrap: wrap;
     min-height: 600px;
-    max-height: 100vh;
+    max-height: 845px;
+
+    .HeroCaseStudy--l11 & {
+      min-height: 800px;
+      margin-bottom: 13%;
+    }
   }
 
   .HeroCaseStudy-left,
@@ -65,10 +71,15 @@
     flex-direction: column;
     justify-content: center;
     padding-top: 0;
+    max-width: 630px;
 
     > h4 {
       position: relative;
       z-index: 1;
+    }
+
+    .HeroCaseStudy--l11 & {
+      padding-top: 150px;
     }
   }
 
@@ -87,6 +98,34 @@
         right: -45px;
         width: 130%;
         min-width: 600px;
+      }
+    }
+
+    .HeroCaseStudy--l11 & {
+      flex: 1 1 100%;
+
+      > img {
+        display: block;
+        margin: 0 auto;
+        position: static;
+        width: 90%;
+      }
+    }
+
+    .HeroCaseStudy--e5 & {
+      > img {
+        bottom: -15%;
+        right: -100px;
+        min-width: 595px;
+      }
+    }
+
+    .HeroCaseStudy--gb & {
+      > img {
+        bottom: -14%;
+        right: -140px;
+        width: 110%;
+        min-width: 655px;
       }
     }
   }

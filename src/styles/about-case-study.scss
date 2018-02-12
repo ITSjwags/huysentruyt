@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+.AboutCaseStudy {
+  margin: 0 auto;
+  padding: 115px 20px 75px;
+  text-align: center;
+  width: 100%;
+  max-width: 775px;
+}
+
+.AboutCaseStudy--l11 {
+
+  > h3 {
+    color: $l11-color-primary;
+  }
+}

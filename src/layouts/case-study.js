@@ -38,7 +38,9 @@ class CaseStudyLayout extends Component {
         </header>
 
         <main role="main">
-          {children()}
+          <div className="CaseStudy">
+            {children()}
+          </div>
         </main>
 
         <footer role="contentinfo">
