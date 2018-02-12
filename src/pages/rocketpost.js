@@ -1,6 +1,5 @@
 import React from 'react';
 // components
-import AboutCaseStudy from '../components/about-case-study';
 import HeroCaseStudy from '../components/hero-case-study';
 // images
 import heroRP from '../images/hero-rp.png';
