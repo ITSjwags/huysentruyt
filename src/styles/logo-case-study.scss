@@ -1,0 +1,83 @@
+@import './colors.scss';
+
+.LogoCaseStudy-about {
+  color: white;
+  padding: 75px 20px;
+
+  .LogoCaseStudy--rp & {
+    background: $rp-color-primary;
+  }
+  .LogoCaseStudy--e5 & {
+    background: $e5-color-primary;
+  }
+  .LogoCaseStudy--gb & {
+    background: $gb-color-primary;
+  }
+}
+
+.LogoCaseStudy-logo {
+  align-items: center;
+  display: flex;
+  min-height: 420px;
+  justify-content: center;
+  padding: 20px;
+
+  .LogoCaseStudy--rp & {
+    background: $rp-color-secondary;
+
+    > img {
+      max-width: 366px;
+    }
+  }
+  .LogoCaseStudy--e5 & {
+    background: $e5-color-secondary;
+
+    > img {
+      max-width: 440px;
+    }
+  }
+  .LogoCaseStudy--gb & {
+    background: $gb-color-secondary;
+
+    > img {
+      max-width: 300px;
+    }
+  }
+
+  > img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.LogoCaseStudy-right {
+  background-size: cover;
+  background-position: top center;
+  min-height: 440px;
+  width: 100%;
+
+  .LogoCaseStudy--rp & {
+    background-image: url(../images/logo-featured-image--rp.png);
+  }
+  .LogoCaseStudy--e5 & {
+    background-image: url(../images/logo-featured-image--e5.png);
+    background-position: center center;
+  }
+  .LogoCaseStudy--gb & {
+    background-image: url(../images/logo-featured-image--gb.png);
+    background-position: center center;
+  }
+}
+
+/* desktop styles */
+@media all and (min-width: 768px) {
+  .LogoCaseStudy {
+    display: flex;
+  }
+
+  .LogoCaseStudy-left,
+  .LogoCaseStudy-right {
+    flex: 1 1 50%;
+  }
+}

@@ -14,8 +14,8 @@
   &.is-fixed {
     animation: slide-down 250ms ease-in-out forwards;
     background: rgba(0, 0, 0, 0.75);
-    transform: translateY(-100%);
     position: fixed;
+    transform: translateY(-100%);
     z-index: 2;
   }
 }

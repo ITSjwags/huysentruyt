@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
+// images
+import arrow from '../images/arrow.png';
 // styles
 import '../styles/hero-case-study.scss';
 
@@ -19,6 +21,16 @@ class HeroCaseStudy extends Component {
             <p className="HeroCaseStudy-divider"></p>
             <h4>{blurb}</h4>
           </div>
+
+          <ScrollLink
+            className="HeroCaseStudy-arrow"
+            to={identifier}
+            smooth={"easeInOutQuad"}
+            duration={750}
+            offset={-70}
+          >
+            <img src={arrow} alt="Scroll down for more content." />
+          </ScrollLink>
 
           <div className="HeroCaseStudy-right">
             <img src={featuredImageURL} alt={`${brand} featured image`} />
