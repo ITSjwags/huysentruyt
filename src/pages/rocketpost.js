@@ -4,9 +4,11 @@ import HeroCaseStudy from '../components/hero-case-study';
 import LogoCaseStudy from '../components/logo-case-study';
 // images
 import heroRP from '../images/hero-rp.png';
+import interfaceImage from '../images/rp-interface.png';
 import logo from '../images/logo--rp.png';
 // styles
 import '../styles/about-case-study.scss';
+import '../styles/rocketpost.scss';
 
 
 const brand = "Rocketpost";
@@ -34,6 +36,15 @@ const RocketpostPage = () => (
       identifier={identifier}
       logo={logo}
     />
+
+    <div className="Rocketpost-interface">
+      <div className="Rocketpost-interface-content">
+        <h3>The Interface</h3>
+        <p>In order to make the job posting process easier for the user, we needed the interface to be a very simple, straight-forward and rewarding experience. To accomplish this, we broke long forms down to a step-by-step process, laid our data for each post across the top of each post page, and gave the user easy access to very clear data visualizations.</p>
+      </div>
+
+      <img src={interfaceImage} alt={`${brand} interface screenshot`} />
+    </div>
 
   </div>
 )

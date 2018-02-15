@@ -1,0 +1,45 @@
+@import '../styles/colors.scss';
+
+.Rocketpost-interface {
+  > img {
+    display: block;
+    position: relative;
+    left: 7%;
+    width: 100%;
+  }
+}
+
+.Rocketpost-interface-content {
+  padding: 60px 20px 0;
+
+  > h3 {
+    color: $rp-color-secondary;
+  }
+}
+
+
+/* desktop styles */
+@media all and (min-width: 768px) {
+  .Rocketpost-interface {
+    display: flex;
+    align-items: center;
+  }
+
+  .Rocketpost-interface {
+    > img {
+      flex: 1;
+      left: 0;
+      margin-right: -17%;
+      margin-bottom: -15%;
+      order: 1;
+      width: 75%;
+    }
+  }
+
+  .Rocketpost-interface-content {
+    flex: 1;
+    order: 2;
+    padding-right: 5%;
+    width: 25%;
+  }
+}
