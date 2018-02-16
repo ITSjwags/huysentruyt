@@ -37,13 +37,14 @@ const RocketpostPage = () => (
       logo={logo}
     />
 
-    <div className="Rocketpost-interface">
+    <div className="Rocketpost-interface g-container">
+      <img src={interfaceImage} alt={`${brand} interface screenshot`} />
+
       <div className="Rocketpost-interface-content">
         <h3>The Interface</h3>
         <p>In order to make the job posting process easier for the user, we needed the interface to be a very simple, straight-forward and rewarding experience. To accomplish this, we broke long forms down to a step-by-step process, laid our data for each post across the top of each post page, and gave the user easy access to very clear data visualizations.</p>
       </div>
 
-      <img src={interfaceImage} alt={`${brand} interface screenshot`} />
     </div>
 
   </div>

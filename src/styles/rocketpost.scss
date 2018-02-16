@@ -1,16 +1,22 @@
 @import '../styles/colors.scss';
 
 .Rocketpost-interface {
+  display: flex;
+  flex-direction: column;
+
   > img {
     display: block;
-    position: relative;
     left: 7%;
+    order: 2;
+    position: relative;
     width: 100%;
   }
 }
 
 .Rocketpost-interface-content {
+  order: 1;
   padding: 60px 20px 0;
+  position: relative;
 
   > h3 {
     color: $rp-color-secondary;
@@ -21,7 +27,7 @@
 /* desktop styles */
 @media all and (min-width: 768px) {
   .Rocketpost-interface {
-    display: flex;
+    flex-direction: row;
     align-items: center;
   }
 

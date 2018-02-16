@@ -1,0 +1,55 @@
+@import '../styles/colors.scss';
+
+.FooterCaseStudy {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+
+  &--rocketpost {
+    background-color: $rp-color-footer;
+  }
+  &--leveleleven {
+    background-color: $l11-color-footer;
+  }
+  &--element5 {
+    background-color: $e5-color-footer;
+  }
+  &--gentlemans-box {
+    background-color: $gb-color-footer;
+  }
+
+  > p {
+    font-size: 16px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  > h2 {
+    padding-bottom: 20px;
+  }
+
+  > img {
+    animation: none;
+    display: block;
+    height: auto;
+    width: 66px;
+  }
+
+  &:hover {
+    > img {
+      animation: pulseHoriz 2s infinite;
+      animation-fill-mode: forward;
+    }
+  }
+}
+
+@keyframes pulseHoriz {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}

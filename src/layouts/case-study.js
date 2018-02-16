@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 // components
 import NavbarCaseStudy from '../components/navbar-case-study';
-// import FooterCaseStudy from '../components/footer-case-study';
+import FooterCaseStudy from '../components/footer-case-study';
 // styles
 import '../styles/index.scss';
 
@@ -44,7 +44,10 @@ class CaseStudyLayout extends Component {
         </main>
 
         <footer role="contentinfo">
-          {/* <Footer /> */}
+          <FooterCaseStudy
+            currentPage={pageName}
+            pages={pages}
+          />
         </footer>
       </div>
     )
