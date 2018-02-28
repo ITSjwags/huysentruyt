@@ -6,6 +6,7 @@ import LogoCaseStudy from '../components/logo-case-study';
 import heroRP from '../images/hero-rp.png';
 import interfaceImage from '../images/rp-interface.png';
 import logo from '../images/logo--rp.png';
+import mocksImage from '../images/mocks.png';
 // styles
 import '../styles/about-case-study.scss';
 import '../styles/rocketpost.scss';
@@ -46,6 +47,8 @@ const RocketpostPage = () => (
       </div>
 
     </div>
+
+    <img className="Rocketpost-mocks" src={mocksImage} alt={`${brand} app images`} />
 
   </div>
 )
