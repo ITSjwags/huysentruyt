@@ -1,0 +1,44 @@
+@import '../styles/colors.scss';
+
+.LevelEleven-brand {
+  background-color: $l11-color-secondary;
+  color: $color-white;
+  padding-top: 70px;
+}
+
+.LevelEleven-product {
+  background-color: #F5F5F5;
+  padding: 160px 20px 60px;
+}
+
+.LevelEleven-brand-content,
+.LevelEleven-product-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 815px;
+}
+
+.LevelEleven-brand-content {
+  > p {
+    margin-bottom: -10%;
+  }
+}
+
+.LevelEleven-product-content {
+  > h3 {
+    color: $l11-color-primary;
+  }
+}
+
+.LevelEleven-mocks {
+  display: block;
+  transform: translateY(10%);
+  width: 100%;
+}
+
+/* desktop styles */
+@media all and (min-width: 768px) {
+
+}
