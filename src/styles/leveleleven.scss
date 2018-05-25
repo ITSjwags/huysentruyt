@@ -8,11 +8,9 @@
 
 .LevelEleven-product {
   background-color: #F5F5F5;
-  padding: 160px 20px 60px;
 }
 
-.LevelEleven-brand-content,
-.LevelEleven-product-content {
+.LevelEleven-blurb {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
@@ -20,13 +18,15 @@
   max-width: 815px;
 }
 
-.LevelEleven-brand-content {
+.LevelEleven-blurb--brand {
   > p {
     margin-bottom: -10%;
   }
 }
 
-.LevelEleven-product-content {
+.LevelEleven-blurb--product {
+  padding: 80px 0px 30px;
+
   > h3 {
     color: $l11-color-primary;
   }
@@ -38,7 +38,43 @@
   width: 100%;
 }
 
+.LevelEleven-productFeature {
+  background: $color-white;
+  padding: 75px 0;
+
+  h3 {
+    color: $l11-color-primary;
+  }
+}
+
+.LevelEleven-productIcon {
+  height: 82px;
+  margin-bottom: 35px;
+  width: 82px;
+}
+
+.LevelEleven-productImage {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+
 /* desktop styles */
 @media all and (min-width: 768px) {
+  .LevelEleven-blurb--product {
+    padding: 160px 0 60px;
+  }
 
+  .LevelEleven-productFeature-content {
+    display: flex;
+  }
+
+  .LevelEleven-productFeature-left,
+  .LevelEleven-productFeature-right {
+    flex: 1;
+  }
+  .LevelEleven-productFeature-left {
+    max-width: 450px;
+  }
 }

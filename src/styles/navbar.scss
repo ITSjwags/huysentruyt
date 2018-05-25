@@ -14,15 +14,17 @@
   &.is-fixed {
     animation: slide-down 250ms ease-in-out forwards;
     background: rgba(0, 0, 0, 0.75);
+    left: 50%;
     position: fixed;
-    transform: translateY(-100%);
+    transform: translate(-50%,-100%);
+    max-width: 1320px;
     z-index: 2;
   }
 }
 
 @keyframes slide-down {
-  0% { transform: translateY(-100%) }
-  100% { transform: translateY(0) }
+  0% { transform: translate(-50%,-100%) }
+  100% { transform: translate(-50%, 0) }
 }
 
 .Navbar-logo {
