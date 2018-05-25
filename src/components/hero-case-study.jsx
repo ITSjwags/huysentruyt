@@ -6,7 +6,6 @@ import arrow from '../images/arrow.png';
 // styles
 import '../styles/hero-case-study.scss';
 
-
 class HeroCaseStudy extends Component {
 
   render() {

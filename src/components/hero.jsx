@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import { Link as ScrollLink } from 'react-scroll';
 // images
 import arrow from '../images/arrow.png';
-import heroImage from '../images/hero.jpg';
 // styles
 import '../styles/hero.scss';
 
@@ -21,6 +21,8 @@ class Hero extends Component {
   }
 
   render() {
+    const { background } = this.props;
+
     return (
       <div className="Hero g-bg-change">
         <div className="Hero-content">
@@ -60,7 +62,9 @@ class Hero extends Component {
           </div>
 
           <div className="Hero-right">
-            <img className="Hero-right-background" src={heroImage} alt="Jeffrey Huysentruyt image" />
+            <div className="Hero-right-background">
+              <Img sizes={background.sizes} />
+            </div>
             <div className="Hero-right-content">
               <ScrollLink
                 to="about"
@@ -80,7 +84,7 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-
+  background: PropTypes.object,
 };
 
 export default Hero;
