@@ -5,11 +5,15 @@
   "author": "Jonathan Wagoner <jvwagoner@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.255",
-    "gatsby-cli": "^1.1.50",
+    "gatsby-cli": "^1.1.52",
+    "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.30",
     "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-postcss-sass": "^1.0.14",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sharp": "^1.6.44",
+    "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-transformer-sharp": "^1.6.24",
     "lodash": "^4.17.5",
     "react-scroll": "^1.7.5"
   },

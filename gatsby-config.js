@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: `/huysentruyt`,
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-plugin-postcss-sass`,
+      resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [require('autoprefixer')()]
       },
@@ -16,6 +16,15 @@ module.exports = {
           `Montserrat\:400,700,900`
         ]
       }
-    }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "img",
+        path: `${__dirname}/src/images`
+      }
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp"
   ],
 }
